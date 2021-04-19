@@ -6,7 +6,7 @@ export const validatePhoneNumber = (value) => phoneRegExp.test(value);
 
 export const validateSelected = (value) => value !== '';
 
-export const validateCheckbox = (value) => value = true;
+export const validateCheckbox = (value) => value === true;
 
 
 export const validationRules = {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useFormik } from 'formik';
 import classNames from 'classnames';
 import { useHistory } from 'react-router-dom';
@@ -26,14 +26,10 @@ const RegisterForm = () => {
           })(values);
         },
         onSubmit: (values, actions) => {
-          console.log(values);
           dispatch(RegisterTypes.userRegister(values));
           history.push('/confirm');
         }
       });
-
-      const [isChecked, setIsChecked] = useState(false);
-      console.log(isChecked);
 
     return (
       <form
@@ -69,11 +65,12 @@ const RegisterForm = () => {
                   <input 
                     type="checkbox"
                     id="checkTerm"
-                    defaultChecked={isChecked}
-                    // onChange={()=>setIsChecked(true)}
+                    name="checkTerm"
+                    defaultChecked={false}
                     onBlur={formik.handleBlur}
                     onChange={formik.handleChange}
-                  />&nbsp;
+                  />
+                  &nbsp;
                   Agree Terms and Conditions
               </label>
               {formik.touched.checkTerm && formik.errors.checkTerm && (
