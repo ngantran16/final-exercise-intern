@@ -25,7 +25,7 @@ const RegisterForm = () => {
             checkTerm: validationRules.checkbox
           })(values);
         },
-        onSubmit: (values, actions) => {
+        onSubmit: (values) => {
           dispatch(RegisterTypes.userRegister(values));
           history.push('/confirm');
         }
@@ -85,7 +85,7 @@ const RegisterForm = () => {
           <div className="submit-button">
               <button 
                   type="submit"
-                  // disabled={!formik.isValid || formik.isSubmitting}
+                  disabled={!formik.isValid && formik.dirty}
                   className="radius-button"
               >
                   <img src={Images.arrow} alt="arrow-img" />

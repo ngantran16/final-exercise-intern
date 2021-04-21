@@ -12,6 +12,7 @@ import Info from '../Info/Info';
 import Search from '../Map/Search';
 import tableRoutes from '../../utils/route-strings';
 import Contact from '../../containers/Contact/Contact';
+import BookingMap from '../../containers/Map/Booking';
 
 function App() {
   return (
@@ -32,6 +33,9 @@ function App() {
           </Route>
           <Route path={tableRoutes.contact}>
             <Contact />
+          </Route>
+          <Route path={tableRoutes.booking}>
+            <BookingMap />
           </Route>
           <Route path={tableRoutes.home}>
             <Intro />

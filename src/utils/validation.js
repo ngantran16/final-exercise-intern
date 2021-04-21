@@ -1,5 +1,7 @@
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
+const numberRegex = /^(0*[1-9][0-9]*(\.[0-9]*)?|0*\.[0-9]*[1-9][0-9]*)$/;
+
 export const validateRequired = (value) => !!value;
 
 export const validatePhoneNumber = (value) => phoneRegExp.test(value);
@@ -7,6 +9,8 @@ export const validatePhoneNumber = (value) => phoneRegExp.test(value);
 export const validateSelected = (value) => value !== '';
 
 export const validateCheckbox = (value) => value === true;
+
+export const validateNumber = (value) => numberRegex.test(value) && value < 10;
 
 
 export const validationRules = {
@@ -35,6 +39,13 @@ checkbox: [
   {
     validator: validateCheckbox,
     message: 'You have to agree with the Terms'
+  }
+],
+
+number: [
+  {
+    validator: validateNumber,
+    message: 'Please enter one valid number for each field'
   }
 ]
 

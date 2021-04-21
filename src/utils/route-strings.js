@@ -4,6 +4,7 @@ const tableRoutes = {
   confirm: '/confirm',
   information: '/information',
   search: '/search',
+  booking: '/booking',
   contact: '/contact',
 };
 
