@@ -13,6 +13,7 @@ import Search from '../Map/Search';
 import tableRoutes from '../../utils/route-strings';
 import Contact from '../../containers/Contact/Contact';
 import BookingMap from '../../containers/Map/Booking';
+import UberWork from '../../containers/UberWork/UberWork';
 
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
           </Route>
           <Route path={tableRoutes.booking}>
             <BookingMap />
+          </Route>
+          <Route path={tableRoutes.uberwork}>
+            <UberWork />
           </Route>
           <Route path={tableRoutes.home}>
             <Intro />

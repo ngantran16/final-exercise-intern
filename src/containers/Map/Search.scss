@@ -17,9 +17,9 @@
 }
 
 .leaflet-control-geosearch form {
-    position: absolute;
-    left: -25vw;
-    width: 35vw;
+    position: relative;
+    left: -20vw;
+    width: 30vw;
     border-radius: 0 4px 4px 0;
     border: 2px solid #fff;
     border-left: none;
@@ -32,6 +32,6 @@
 
 .leaflet-control-geosearch.active form {
     display: block;
-  }
+}
   
   

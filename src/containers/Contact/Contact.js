@@ -46,7 +46,7 @@ return (
 <div className="container">
 <Header />
 <div class="main">
-    <img src={Images.imgBackground} alt="background-img" className="background-img" />
+    <img src={Images.background2} alt="background-img" className="background-img" />
     <div className="wrapper">
         <div className="form-backgronund">
             <form method="post" onSubmit={formik.handleSubmit}>

@@ -24,7 +24,7 @@ const Info = () => {
           })(values);
         },
         onSubmit: (values, actions) => {
-            history.push('/search');
+            history.push('/booking');
         }
       });
 

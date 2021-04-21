@@ -1,0 +1,25 @@
+.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+    border: 2px solid rgba(0,0,0,0.2);
+    background-clip: padding-box;
+    position: relative;
+    margin-right: 65vw;
+}
+
+.leaflet-routing-geocoders input {
+    width: 333px;
+    width: calc(100% - 4px);
+    line-height: 1.67;
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.leaflet-touch .leaflet-bar a {
+    width: 30px !important;
+    height: 30px;
+    line-height: 30px;
+}
+
+.leaflet-right .leaflet-control {
+    width: 30vw;
+}

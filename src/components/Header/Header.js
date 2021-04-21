@@ -1,10 +1,13 @@
 import React from 'react';
-import Images from '../../themes/Images';
-import './Header.scss';
+import { useSelector } from 'react-redux';
 import { FaHome, FaUserCircle, FaCartPlus, FaStar, FaBell } from "react-icons/fa";
 import { MdSettings } from "react-icons/md";
 
+import Images from '../../themes/Images';
+import './Header.scss';
+
 const Header = () => {
+    const response = useSelector((state) => state.register.response);
     return (
         <header className="header">
             <div className="logo">
@@ -13,14 +16,24 @@ const Header = () => {
             </div>
             <div>
                 <div className="dropdown">
+                { 
+                    response ? (
+                        <div className="account-user">
+                            <p>Ngan Tran</p>
+                            <img src={ Images.menuIcon } alt="menu-icon" className="menu-icon" />
+                        </div>
+                        
+                    ): 
                     <img src={ Images.menuIcon } alt="menu-icon" className="menu-icon" />
+                }
+                   
                     <div className="dropdown-content">
                         <a href="/"><FaHome color="#888888" /><span>Home</span></a>
-                        <a href="reactjs.org"><FaUserCircle color="#888888" /><span>Profile</span></a>
-                        <a href="reactjs.org"><FaCartPlus color="#888888" /><span>Your Book</span></a>
-                        <a href="reactjs.org"><FaStar color="#888888" /><span>Favourites</span></a>
-                        <a href="reactjs.org"><FaBell color="#888888" /><span>Notifications</span></a>
-                        <a href="reactjs.org"><MdSettings color="#888888" /><span>Setting</span></a>
+                        <a href="/"><FaUserCircle color="#888888" /><span>Profile</span></a>
+                        <a href="/booking"><FaCartPlus color="#888888" /><span>Your Book</span></a>
+                        <a href="/search"><FaStar color="#888888" /><span>Search</span></a>
+                        <a href="/contact"><FaBell color="#888888" /><span>Contact</span></a>
+                        <a href="/uber-work"><MdSettings color="#888888" /><span>Uber work</span></a>
                     </div>
                 </div>
             </div>

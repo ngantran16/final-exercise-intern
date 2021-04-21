@@ -2,7 +2,8 @@ import React from "react";
 import {
   MapContainer,
   TileLayer,
-  useMap
+  useMap,
+  Marker, Popup
 } from "react-leaflet";
 import * as L from "leaflet";
 import "leaflet-routing-machine";
@@ -12,6 +13,7 @@ import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
 
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import './Booking.scss';
 
 function MyComponent() {
   const map = useMap();
@@ -30,6 +32,14 @@ function MyComponent() {
   return null;
 }
 
+delete L.Icon.Default.prototype._getIconUrl;
+
+L.Icon.Default.mergeOptions({
+    iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+    iconUrl: require('leaflet/dist/images/marker-icon.png'),
+    shadowUrl: require('leaflet/dist/images/marker-shadow.png')
+});
+
 const Booking = () => {
   return (
     <div>
@@ -41,9 +51,14 @@ const Booking = () => {
         scrollWheelZoom={false}
       >
         <TileLayer
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
+        <Marker position={[51.505, -0.09]}>
+            <Popup>
+              A pretty CSS3 popup. <br /> Easily customizable.
+            </Popup>
+          </Marker>
         <MyComponent />
       </MapContainer>
       <Footer />

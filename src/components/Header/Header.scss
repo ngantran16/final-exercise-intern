@@ -21,6 +21,7 @@
 .dropdown {
     position: relative;
     display: inline-block;
+    z-index: 11111;
   }
   
   .dropdown-content {
@@ -40,15 +41,20 @@
     display: block;
   }
   
-  .dropdown-content a:hover {
+.dropdown-content a:hover {
     background-color: #f1f1f1;
     color: black
 }
   
-  .dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content {
     display: block;
-  }
+}
   
-.dropdown-content a span{
+.dropdown-content a span {
   padding: 20px;
+}
+
+.account-user {
+  display: flex;
+  flex-direction: row;
 }

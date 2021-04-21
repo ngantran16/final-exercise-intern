@@ -23,6 +23,7 @@ const ConfirmForm = () => {
             history.push('/information');
         } else {
             alert('The OTP not match!');
+            history.push('/registration');
         }
     }
 

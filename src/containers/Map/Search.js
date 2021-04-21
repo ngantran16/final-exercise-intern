@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup, withLeaflet } from 'react-leaflet';
+import { MapContainer, TileLayer } from 'react-leaflet';
 
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';

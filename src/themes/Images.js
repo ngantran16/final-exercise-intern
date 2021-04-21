@@ -11,6 +11,7 @@ import male from '../assets/Image/male.png';
 import upload from '../assets/Image/upload.png';
 import backgroundIntro from '../assets/Image/background-intro.PNG';
 import whiteArrow from '../assets/Image/white-arrow.png';
+import background2  from '../assets/Image/background2.jpg';
 
 const Images = {
     uberIcon,
@@ -26,6 +27,7 @@ const Images = {
     upload,
     backgroundIntro,
     whiteArrow,
+    background2,
 }
 
 export default Images;

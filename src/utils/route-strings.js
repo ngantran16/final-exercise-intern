@@ -6,6 +6,7 @@ const tableRoutes = {
   search: '/search',
   booking: '/booking',
   contact: '/contact',
+  uberwork: '/uber-work',
 };
 
 export default tableRoutes;
